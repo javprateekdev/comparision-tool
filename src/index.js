@@ -3,11 +3,20 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import style from './style.css';
+import GenericPdfDownloader from "./GenericPdfDownloader";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <GenericPdfDownloader 
+          downloadFileName="CustomPdf" 
+          rootElementId="testId" 
+        />
+         <div id="testId"> 
+         <App />
+         </div>   
+    
   </React.StrictMode>
 );
 
